@@ -1,0 +1,4 @@
+- [ ] Build UMME CRM lead workspace and responsive navigation.
+- [ ] Add sign-in, secure per-user leads, follow-ups, and activity tracking.
+- [ ] Add Excel/CSV import and Excel export.
+- [ ] Verify key workflows and preview build.

@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792040771479,
+      "tag": "0000_create_umme_crm_tables",
+      "breakpoints": true
+    }
+  ]
 }
