@@ -14,7 +14,89 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      lead_activities: {
+        Row: {
+          activity_type: string
+          body: string
+          created_at: string
+          id: string
+          lead_id: string
+          user_id: string
+        }
+        Insert: {
+          activity_type?: string
+          body: string
+          created_at?: string
+          id?: string
+          lead_id: string
+          user_id: string
+        }
+        Update: {
+          activity_type?: string
+          body?: string
+          created_at?: string
+          id?: string
+          lead_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lead_activities_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      leads: {
+        Row: {
+          company: string
+          created_at: string
+          deal_value: number
+          email: string
+          id: string
+          name: string
+          next_follow_up: string | null
+          notes: string
+          phone: string
+          source: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          company?: string
+          created_at?: string
+          deal_value?: number
+          email?: string
+          id?: string
+          name: string
+          next_follow_up?: string | null
+          notes?: string
+          phone?: string
+          source?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          deal_value?: number
+          email?: string
+          id?: string
+          name?: string
+          next_follow_up?: string | null
+          notes?: string
+          phone?: string
+          source?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
